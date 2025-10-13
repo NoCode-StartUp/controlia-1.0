@@ -75,10 +75,7 @@ export default function Landing() {
                 Privada e Segura
               </span>
             </h2>
-            <p className="mb-8 text-lg text-muted-foreground md:text-xl">
-              Seu ChatGPT Privado com controle corporativo total. Dados segregados, BYOK para transparência de custos, 
-              e arquitetura multi-tenant com segurança RLS garantida.
-            </p>
+            <p className="mb-8 text-lg text-muted-foreground md:text-xl">Seu ChatGPT Privado com controle corporativo total. Dados segregados, Use sua própria API para transparência de custos com arquitetura segura e garantida.</p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link to="/auth/register">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow-primary">
