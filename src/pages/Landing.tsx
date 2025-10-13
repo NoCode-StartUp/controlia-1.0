@@ -25,21 +25,21 @@ const plans = [{
   price: "R$ 99",
   period: "/mês",
   description: "Ideal para pequenas equipes começando",
-  features: ["Até 10 usuários", "5.000 requisições IA/mês", "Suporte por email", "Dashboard básico", "API access"],
+  features: ["Até 10 usuários", "BYOK (Traga sua API)", "Suporte por email", "Dashboard de gestão", "Segurança RLS completa"],
   highlighted: false
 }, {
   name: "Empresa",
   price: "R$ 299",
   period: "/mês",
   description: "Para empresas em crescimento",
-  features: ["Até 50 usuários", "50.000 requisições IA/mês", "Suporte prioritário", "Analytics avançado", "Customização de IA", "BYOK disponível"],
+  features: ["Até 50 usuários", "BYOK (Traga sua API)", "Suporte prioritário", "Analytics avançado", "Customização de contexto IA", "Gestão por departamento"],
   highlighted: true
 }, {
   name: "Master",
   price: "Personalizado",
   period: "",
   description: "Solução enterprise completa",
-  features: ["Usuários ilimitados", "Requisições ilimitadas", "Suporte 24/7 dedicado", "SLA garantido", "Onboarding personalizado", "Infraestrutura dedicada"],
+  features: ["Usuários ilimitados", "BYOK (Traga sua API)", "Suporte 24/7 dedicado", "SLA garantido", "Onboarding personalizado", "Infraestrutura dedicada"],
   highlighted: false
 }];
 export default function Landing() {
