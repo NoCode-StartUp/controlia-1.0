@@ -3,80 +3,47 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Sparkles, Zap, Shield, Users, ArrowRight, Check } from "lucide-react";
-
-const features = [
-  {
-    icon: Sparkles,
-    title: "Gating de IA e Contexto Corporativo",
-    description: "Acesso liberado por assinatura com assistente treinado no contexto interno da sua empresa."
-  },
-  {
-    icon: Zap,
-    title: "Custo Transparente (BYOK)",
-    description: "Use sua própria Chave API (OpenAI/Claude) e pague apenas pela gestão e segurança da plataforma, controlando seus gastos de token."
-  },
-  {
-    icon: Shield,
-    title: "Segurança Multi-tenant (RLS)",
-    description: "Arquitetura com Row-Level Security (RLS) no Supabase, garantindo isolamento total dos dados de cada empresa."
-  },
-  {
-    icon: Users,
-    title: "Painel de Gestão Completa",
-    description: "Gerencie colaboradores, acesse o Dashboard Master e configure as regras de uso da IA por departamento."
-  }
-];
-
-const plans = [
-  {
-    name: "Básico",
-    price: "R$ 99",
-    period: "/mês",
-    description: "Ideal para pequenas equipes começando",
-    features: [
-      "Até 10 usuários",
-      "5.000 requisições IA/mês",
-      "Suporte por email",
-      "Dashboard básico",
-      "API access"
-    ],
-    highlighted: false
-  },
-  {
-    name: "Empresa",
-    price: "R$ 299",
-    period: "/mês",
-    description: "Para empresas em crescimento",
-    features: [
-      "Até 50 usuários",
-      "50.000 requisições IA/mês",
-      "Suporte prioritário",
-      "Analytics avançado",
-      "Customização de IA",
-      "BYOK disponível"
-    ],
-    highlighted: true
-  },
-  {
-    name: "Master",
-    price: "Personalizado",
-    period: "",
-    description: "Solução enterprise completa",
-    features: [
-      "Usuários ilimitados",
-      "Requisições ilimitadas",
-      "Suporte 24/7 dedicado",
-      "SLA garantido",
-      "Onboarding personalizado",
-      "Infraestrutura dedicada"
-    ],
-    highlighted: false
-  }
-];
-
+const features = [{
+  icon: Sparkles,
+  title: "Gating de IA e Contexto Corporativo",
+  description: "Acesso liberado por assinatura com assistente treinado no contexto interno da sua empresa."
+}, {
+  icon: Zap,
+  title: "Custo Transparente (BYOK)",
+  description: "Use sua própria Chave API (OpenAI/Claude) e pague apenas pela gestão e segurança da plataforma, controlando seus gastos de token."
+}, {
+  icon: Shield,
+  title: "Segurança Multi-tenant (RLS)",
+  description: "Arquitetura com Row-Level Security (RLS) no Supabase, garantindo isolamento total dos dados de cada empresa."
+}, {
+  icon: Users,
+  title: "Painel de Gestão Completa",
+  description: "Gerencie colaboradores, acesse o Dashboard Master e configure as regras de uso da IA por departamento."
+}];
+const plans = [{
+  name: "Básico",
+  price: "R$ 99",
+  period: "/mês",
+  description: "Ideal para pequenas equipes começando",
+  features: ["Até 10 usuários", "5.000 requisições IA/mês", "Suporte por email", "Dashboard básico", "API access"],
+  highlighted: false
+}, {
+  name: "Empresa",
+  price: "R$ 299",
+  period: "/mês",
+  description: "Para empresas em crescimento",
+  features: ["Até 50 usuários", "50.000 requisições IA/mês", "Suporte prioritário", "Analytics avançado", "Customização de IA", "BYOK disponível"],
+  highlighted: true
+}, {
+  name: "Master",
+  price: "Personalizado",
+  period: "",
+  description: "Solução enterprise completa",
+  features: ["Usuários ilimitados", "Requisições ilimitadas", "Suporte 24/7 dedicado", "SLA garantido", "Onboarding personalizado", "Infraestrutura dedicada"],
+  highlighted: false
+}];
 export default function Landing() {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -101,9 +68,7 @@ export default function Landing() {
         <div className="absolute inset-0 bg-hero-gradient opacity-20" />
         <div className="container relative mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
-            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Plataforma SaaS Multi-Tenant
-            </Badge>
+            
             <h2 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">
               Plataforma de IA{" "}
               <span className="bg-hero-gradient bg-clip-text text-transparent">
@@ -139,8 +104,7 @@ export default function Landing() {
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {features.map((feature, index) => (
-              <Card key={index} className="border-border bg-card hover:border-primary/50 transition-all">
+            {features.map((feature, index) => <Card key={index} className="border-border bg-card hover:border-primary/50 transition-all">
                 <CardHeader>
                   <div className="mb-2 h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
                     <feature.icon className="h-6 w-6 text-primary" />
@@ -152,8 +116,7 @@ export default function Landing() {
                     {feature.description}
                   </CardDescription>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -168,22 +131,12 @@ export default function Landing() {
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
-            {plans.map((plan, index) => (
-              <Card 
-                key={index} 
-                className={`relative border-border ${
-                  plan.highlighted 
-                    ? 'border-primary shadow-glow-primary scale-105' 
-                    : 'hover:border-primary/50'
-                } transition-all`}
-              >
-                {plan.highlighted && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+            {plans.map((plan, index) => <Card key={index} className={`relative border-border ${plan.highlighted ? 'border-primary shadow-glow-primary scale-105' : 'hover:border-primary/50'} transition-all`}>
+                {plan.highlighted && <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <Badge className="bg-secondary text-secondary-foreground">
                       Mais Popular
                     </Badge>
-                  </div>
-                )}
+                  </div>}
                 <CardHeader>
                   <CardTitle>{plan.name}</CardTitle>
                   <CardDescription>{plan.description}</CardDescription>
@@ -194,29 +147,20 @@ export default function Landing() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
-                    {plan.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-center gap-2">
+                    {plan.features.map((feature, fIndex) => <li key={fIndex} className="flex items-center gap-2">
                         <Check className="h-4 w-4 text-primary" />
                         <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
                 <CardFooter>
                   <Link to="/auth/register" className="w-full">
-                    <Button 
-                      className={`w-full ${
-                        plan.highlighted 
-                          ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
-                          : 'bg-muted hover:bg-muted/80'
-                      }`}
-                    >
+                    <Button className={`w-full ${plan.highlighted ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'bg-muted hover:bg-muted/80'}`}>
                       Começar Agora
                     </Button>
                   </Link>
                 </CardFooter>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -234,6 +178,5 @@ export default function Landing() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 }
