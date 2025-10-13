@@ -21,6 +21,13 @@ const features = [{
   description: "Gerencie colaboradores, controle acessos e configure as regras de uso da IA por departamento."
 }];
 const plans = [{
+  name: "Free",
+  price: "R$ 0",
+  period: "/mês",
+  description: "Experimente gratuitamente",
+  features: ["Até 3 usuários", "Traga sua própria API", "Suporte por email", "Dashboard básico", "Segurança completa"],
+  highlighted: false
+}, {
   name: "Básico",
   price: "R$ 99",
   period: "/mês",
@@ -127,7 +134,7 @@ export default function Landing() {
               Escolha o seu plano de gestão e segurança. Você controla os custos de IA usando sua própria chave de API.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {plans.map((plan, index) => <Card key={index} className={`relative border-border ${plan.highlighted ? 'border-primary shadow-glow-primary scale-105' : 'hover:border-primary/50'} transition-all`}>
                 {plan.highlighted && <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <Badge className="bg-secondary text-secondary-foreground">
