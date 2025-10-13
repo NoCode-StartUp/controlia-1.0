@@ -9,8 +9,8 @@ const features = [{
   description: "Acesso liberado por assinatura com assistente treinado no contexto interno da sua empresa."
 }, {
   icon: Zap,
-  title: "Custo Transparente",
-  description: "Use sua própria chave de API e pague apenas pela gestão e segurança da plataforma, controlando seus gastos."
+  title: "Economia Compartilhada",
+  description: "Uma única chave API para toda a equipe. Compartilhe custos de IA entre todos os colaboradores e economize até 70% comparado a assinaturas individuais."
 }, {
   icon: Shield,
   title: "Segurança e Privacidade",
@@ -82,7 +82,7 @@ export default function Landing() {
                 Privada e Segura
               </span>
             </h2>
-            <p className="mb-8 text-lg text-muted-foreground md:text-xl">Seu ChatGPT Privado com controle corporativo total. Dados segregados, custo transparente usando sua própria API, com arquitetura segura e garantida.</p>
+            <p className="mb-8 text-lg text-muted-foreground md:text-xl">Seu ChatGPT Privado com controle corporativo total. Uma única chave API compartilhada por toda a organização. Economize recursos e mantenha controle total sobre custos e segurança.</p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link to="/auth/register">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow-primary">
@@ -121,6 +121,58 @@ export default function Landing() {
                   </CardDescription>
                 </CardContent>
               </Card>)}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 border-t border-border bg-card/30">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl">
+            <div className="text-center mb-12">
+              <h3 className="mb-4 text-3xl font-bold">Economia Inteligente</h3>
+              <p className="text-lg text-muted-foreground">
+                Compartilhe uma única chave API com toda a equipe e reduza custos drasticamente
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card className="border-border bg-card p-6">
+                <div className="mb-4">
+                  <div className="text-4xl font-bold text-primary">70%</div>
+                  <div className="text-sm text-muted-foreground">Economia em relação a múltiplas assinaturas</div>
+                </div>
+                <p className="text-muted-foreground">
+                  Em vez de cada colaborador pagar uma assinatura individual de IA, toda a equipe usa uma única chave API compartilhada.
+                </p>
+              </Card>
+              <Card className="border-border bg-card p-6">
+                <div className="mb-4">
+                  <div className="text-4xl font-bold text-primary">1</div>
+                  <div className="text-sm text-muted-foreground">Chave API para toda organização</div>
+                </div>
+                <p className="text-muted-foreground">
+                  Centralize o custo de IA em uma única conta OpenAI ou Claude. Visibilidade total dos gastos e controle unificado.
+                </p>
+              </Card>
+              <Card className="border-border bg-card p-6">
+                <div className="mb-4">
+                  <div className="text-4xl font-bold text-primary">100%</div>
+                  <div className="text-sm text-muted-foreground">Controle sobre uso e gastos</div>
+                </div>
+                <p className="text-muted-foreground">
+                  Configure limites por usuário, departamento ou projeto. Acompanhe em tempo real quanto cada área está consumindo.
+                </p>
+              </Card>
+              <Card className="border-border bg-card p-6">
+                <div className="mb-4">
+                  <div className="text-4xl font-bold text-primary">∞</div>
+                  <div className="text-sm text-muted-foreground">Uso ilimitado conforme sua API</div>
+                </div>
+                <p className="text-muted-foreground">
+                  Não há limite artificial de uso. Seus colaboradores usam o quanto precisarem dentro dos limites da sua própria chave API.
+                </p>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
