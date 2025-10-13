@@ -7,23 +7,23 @@ import { Sparkles, Zap, Shield, Users, ArrowRight, Check } from "lucide-react";
 const features = [
   {
     icon: Sparkles,
-    title: "IA Avançada",
-    description: "Assistente inteligente com processamento de linguagem natural de última geração."
+    title: "Gating de IA e Contexto Corporativo",
+    description: "Acesso liberado por assinatura com assistente treinado no contexto interno da sua empresa."
   },
   {
     icon: Zap,
-    title: "Alta Performance",
-    description: "Infraestrutura escalável que cresce com sua empresa sem limites."
+    title: "Custo Transparente (BYOK)",
+    description: "Use sua própria Chave API (OpenAI/Claude) e pague apenas pela gestão e segurança da plataforma, controlando seus gastos de token."
   },
   {
     icon: Shield,
-    title: "Segurança Total",
-    description: "BYOK (Bring Your Own Key) para controle total dos seus dados."
+    title: "Segurança Multi-tenant (RLS)",
+    description: "Arquitetura com Row-Level Security (RLS) no Supabase, garantindo isolamento total dos dados de cada empresa."
   },
   {
     icon: Users,
-    title: "Multi-Tenant",
-    description: "Gestão isolada e segura para múltiplas empresas na mesma plataforma."
+    title: "Painel de Gestão Completa",
+    description: "Gerencie colaboradores, acesse o Dashboard Master e configure as regras de uso da IA por departamento."
   }
 ];
 
@@ -105,14 +105,14 @@ export default function Landing() {
               Plataforma SaaS Multi-Tenant
             </Badge>
             <h2 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">
-              Automação Inteligente{" "}
+              Plataforma de IA{" "}
               <span className="bg-hero-gradient bg-clip-text text-transparent">
-                Impulsionada por IA
+                Privada e Segura
               </span>
             </h2>
             <p className="mb-8 text-lg text-muted-foreground md:text-xl">
-              Transforme sua empresa com assistentes de IA personalizados. Gestão completa, 
-              segurança enterprise e escalabilidade sem limites.
+              Seu ChatGPT Privado com controle corporativo total. Dados segregados, BYOK para transparência de custos, 
+              e arquitetura multi-tenant com segurança RLS garantida.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link to="/auth/register">
@@ -164,7 +164,7 @@ export default function Landing() {
           <div className="mb-12 text-center">
             <h3 className="mb-4 text-3xl font-bold">Planos Flexíveis</h3>
             <p className="text-lg text-muted-foreground">
-              Escolha o plano ideal para o seu negócio
+              Escolha o seu plano de gestão e segurança. O custo da IA (tokens) é gerenciado diretamente por você (modelo BYOK).
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
