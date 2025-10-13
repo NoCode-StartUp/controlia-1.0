@@ -9,12 +9,12 @@ const features = [{
   description: "Acesso liberado por assinatura com assistente treinado no contexto interno da sua empresa."
 }, {
   icon: Zap,
-  title: "Custo Transparente (BYOK)",
-  description: "Use sua própria Chave API (OpenAI/Claude) e pague apenas pela gestão e segurança da plataforma, controlando seus gastos de token."
+  title: "Custo Transparente",
+  description: "Use sua própria chave de API e pague apenas pela gestão e segurança da plataforma, controlando seus gastos."
 }, {
   icon: Shield,
-  title: "Segurança Multi-tenant (RLS)",
-  description: "Arquitetura com Row-Level Security (RLS) no Supabase, garantindo isolamento total dos dados de cada empresa."
+  title: "Segurança Multi-tenant",
+  description: "Arquitetura de dados com isolamento total entre empresas, garantindo privacidade e proteção completa."
 }, {
   icon: Users,
   title: "Painel de Gestão Completa",
@@ -25,21 +25,21 @@ const plans = [{
   price: "R$ 99",
   period: "/mês",
   description: "Ideal para pequenas equipes começando",
-  features: ["Até 10 usuários", "BYOK (Traga sua API)", "Suporte por email", "Dashboard de gestão", "Segurança RLS completa"],
+  features: ["Até 10 usuários", "Traga sua própria API", "Suporte por email", "Dashboard de gestão", "Segurança completa"],
   highlighted: false
 }, {
   name: "Empresa",
   price: "R$ 299",
   period: "/mês",
   description: "Para empresas em crescimento",
-  features: ["Até 50 usuários", "BYOK (Traga sua API)", "Suporte prioritário", "Analytics avançado", "Customização de contexto IA", "Gestão por departamento"],
+  features: ["Até 50 usuários", "Traga sua própria API", "Suporte prioritário", "Analytics avançado", "Customização de contexto IA", "Gestão por departamento"],
   highlighted: true
 }, {
   name: "Master",
   price: "Personalizado",
   period: "",
   description: "Solução enterprise completa",
-  features: ["Usuários ilimitados", "BYOK (Traga sua API)", "Suporte 24/7 dedicado", "SLA garantido", "Onboarding personalizado", "Infraestrutura dedicada"],
+  features: ["Usuários ilimitados", "Traga sua própria API", "Suporte 24/7 dedicado", "SLA garantido", "Onboarding personalizado", "Infraestrutura dedicada"],
   highlighted: false
 }];
 export default function Landing() {
@@ -75,7 +75,7 @@ export default function Landing() {
                 Privada e Segura
               </span>
             </h2>
-            <p className="mb-8 text-lg text-muted-foreground md:text-xl">Seu ChatGPT Privado com controle corporativo total. Dados segregados, Use sua própria API para transparência de custos com arquitetura segura e garantida.</p>
+            <p className="mb-8 text-lg text-muted-foreground md:text-xl">Seu ChatGPT Privado com controle corporativo total. Dados segregados, custo transparente usando sua própria API, com arquitetura segura e garantida.</p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link to="/auth/register">
                 <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow-primary">
@@ -124,7 +124,7 @@ export default function Landing() {
           <div className="mb-12 text-center">
             <h3 className="mb-4 text-3xl font-bold">Planos Flexíveis</h3>
             <p className="text-lg text-muted-foreground">
-              Escolha o seu plano de gestão e segurança. O custo da IA (tokens) é gerenciado diretamente por você (modelo BYOK).
+              Escolha o seu plano de gestão e segurança. Você controla os custos de IA usando sua própria chave de API.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
