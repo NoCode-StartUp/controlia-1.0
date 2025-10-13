@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Sparkles, Zap, Shield, Users, ArrowRight, Check } from "lucide-react";
 const features = [{
   icon: Sparkles,
-  title: "Gating de IA e Contexto Corporativo",
+  title: "IA com Contexto Corporativo",
   description: "Acesso liberado por assinatura com assistente treinado no contexto interno da sua empresa."
 }, {
   icon: Zap,
@@ -13,12 +13,12 @@ const features = [{
   description: "Use sua própria chave de API e pague apenas pela gestão e segurança da plataforma, controlando seus gastos."
 }, {
   icon: Shield,
-  title: "Segurança Multi-tenant",
-  description: "Arquitetura de dados com isolamento total entre empresas, garantindo privacidade e proteção completa."
+  title: "Segurança e Privacidade",
+  description: "Arquitetura de dados com isolamento completo, garantindo privacidade e proteção total das suas informações."
 }, {
   icon: Users,
   title: "Painel de Gestão Completa",
-  description: "Gerencie colaboradores, acesse o Dashboard Master e configure as regras de uso da IA por departamento."
+  description: "Gerencie colaboradores, controle acessos e configure as regras de uso da IA por departamento."
 }];
 const plans = [{
   name: "Básico",
