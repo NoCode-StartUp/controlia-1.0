@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +60,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'hero-gradient': 'var(--hero-gradient)',
+      },
+      boxShadow: {
+        'glow-primary': 'var(--glow-primary)',
+        'glow-secondary': 'var(--glow-secondary)',
+      },
+      transitionProperty: {
+        'smooth': 'var(--transition-smooth)',
       },
       borderRadius: {
         lg: "var(--radius)",
